@@ -1,8 +1,8 @@
 <?php
-$servername = "3.83.2.168";
-$username = "admin";
-$password = "passwd";
-$dbname = "mydatabase";
+$servername = "ubuntu@ec2-3-95-230-147.compute-1.amazonaws.com";
+$username = "root";
+$password = "admin123";
+$dbname = "windows";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
