@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $conn = new mysqli("3.95.230.147", "root", "admin123", "windows");
+    $conn = new mysqli("localhost", "phpuser", "admin123", "login_db");
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     if ($result && $result->num_rows > 0) {
         $_SESSION['username'] = $username;
-        header("Location: welcome.php");
+        header("Location: index.php");
         exit();
     } else {
         $error = "Invalid username or password";
